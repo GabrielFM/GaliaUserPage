@@ -6,4 +6,7 @@ class ApplicationController < ActionController::Base
   	value = params[:value]
   	Situation.first.update_attributes(temp: params[:value])
   end
+
+  def info
+  end
 end
