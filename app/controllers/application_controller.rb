@@ -4,7 +4,9 @@ class ApplicationController < ActionController::Base
   def show_info 
   	info = params[:info]
   	value = params[:value]
-  	Situation.first.update_attributes(temp: params[:value])
+  	sit = Situation.first
+  	sit.update_attributes(temp: params[:value])
+  	sit.save
   end
 
   def info
