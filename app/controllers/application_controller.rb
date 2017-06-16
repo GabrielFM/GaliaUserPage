@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  def show_info 
+  def infoUpdate 
   	info = params[:info]
   	value = params[:value]
   	sit = Situation.first
