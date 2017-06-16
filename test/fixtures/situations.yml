@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  temp: 1
+  umidity: 1
+  pump: 
+  lum: 1
+  water_level: 1
+
+two:
+  temp: 1
+  umidity: 1
+  pump: 
+  lum: 1
+  water_level: 1
