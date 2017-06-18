@@ -1,4 +1,5 @@
 class Situation < ApplicationRecord
+	belongs_to :user
 	after_initialize :init 
 
 	def init
