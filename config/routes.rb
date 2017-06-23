@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 # get 'info'
 	root 'sessions#new'
 
-	put '/infoUpdate', to: 'application#infoUpdate'
+	post '/infoUpdate', to: 'application#infoUpdate'
 	get '/info/:id', to: 'users#info'
 
 	get    '/login',   to: 'sessions#new'
