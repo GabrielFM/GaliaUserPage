@@ -4,12 +4,9 @@ Rails.application.routes.draw do
 
   get 'user/new'
 
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-# get 'info'
 	root 'sessions#new'
 
-	post '/infoUpdate', to: 'application#infoUpdate'
+	get '/infoUpdate', to: 'application#infoUpdate'
 	get '/info/:id', to: 'users#info'
 
 	get    '/login',   to: 'sessions#new'
