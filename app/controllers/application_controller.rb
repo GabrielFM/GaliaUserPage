@@ -15,10 +15,12 @@ class ApplicationController < ActionController::Base
 		  									  umidity: params[:umidity],
 		  									  pump: params[:pump],
 		  									  lum: params[:lum],
-		  									  water_level: params[:water_level])
+		  									  water_level: params[:water_level],
+                          ground_umi: params[:ground_umi])
 		  	sit.save
 		  end
 	   end
+     render layout: false
   end
 
   def info

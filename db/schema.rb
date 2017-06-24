@@ -10,10 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170618183521) do
+ActiveRecord::Schema.define(version: 20170624150053) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "parameters", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "temp_min"
+    t.integer  "temp_max"
+    t.integer  "umidity_min"
+    t.integer  "umidity_max"
+    t.integer  "ground_umi_max"
+    t.integer  "ground_umi_min"
+    t.integer  "lum_max"
+    t.integer  "lum_min"
+    t.integer  "water_level_min"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "user_id"
+  end
 
   create_table "situations", force: :cascade do |t|
     t.integer  "temp"
@@ -24,6 +40,7 @@ ActiveRecord::Schema.define(version: 20170618183521) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "user_id"
+    t.integer  "ground_umi"
   end
 
   create_table "users", force: :cascade do |t|

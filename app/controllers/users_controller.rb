@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_action :init_user
 
 
+
   def new
   end
 
@@ -17,6 +18,7 @@ class UsersController < ApplicationController
 
   	def init_user
   		@user = current_user
+      @parameter = Parameter.find_by(user_id: current_user.id)
   	end
 
 end

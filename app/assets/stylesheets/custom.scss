@@ -96,3 +96,103 @@ footer {
     }
   }
 }
+
+/* situation icons */
+
+/*reference
+
+.button-to-provider {
+    background-color: #22D12C;
+    border-color: #0;
+    border-radius: 25px;
+    color: #a94442;
+    padding: 50px 50px 50px 50px;
+    text-align: center;
+    background-size: contain;
+    background-image: url(asset_path("img/provider.png"));
+    background-repeat: no-repeat;
+    background-position: center center;     
+}
+*/
+
+.situation-icon-temp-low {
+    background-color: #0AB0EF;
+    border-color: #0;
+    border-radius: 25px;
+    color: #a94442;
+    padding: 50px 50px 50px 50px;
+    text-align: center;
+    background-size: contain;
+    background-image: url(asset_path("img/low_temp.png"));
+    background-repeat: no-repeat;
+    background-position: center center;    
+}
+
+.situation-icon-temp-high {
+    background-color: #FF3333;
+    border-color: #0;
+    border-radius: 25px;
+    color: #a94442;
+    padding: 50px 50px 50px 50px;
+    text-align: center;
+    background-size: contain;
+    background-image: url(asset_path("img/high_temp.png"));
+    background-repeat: no-repeat;
+    background-position: center center;    
+}
+
+.situation-icon-temp-good {
+    background-color: #33FF66;
+    border-color: #0;
+    border-radius: 25px;
+    color: #a94442;
+    padding: 50px 50px 50px 50px;
+    text-align: center;
+    background-size: contain;
+    background-image: url(asset_path("img/good_temp.png"));
+    background-repeat: no-repeat;
+    background-position: center center;    
+}
+
+
+
+.situation-icon-ground-dry {
+    background-color: #FF3333;
+    border-color: #0;
+    border-radius: 25px;
+    color: #a94442;
+    padding: 50px 50px 50px 50px;
+    text-align: center;
+    background-size: contain;
+    background-image: url(asset_path("img/dry_ground.png"));
+    background-repeat: no-repeat;
+    background-position: center center;    
+}
+
+
+.situation-icon-ground-wet {
+    background-color: #FF3333;
+    border-color: #0;
+    border-radius: 25px;
+    color: #a94442;
+    padding: 50px 50px 50px 50px;
+    text-align: center;
+    background-size: contain;
+    background-image: url(asset_path("img/wet_ground.png"));
+    background-repeat: no-repeat;
+    background-position: center center;    
+}
+
+
+.situation-icon-ground-ok {
+    background-color: #33FF66;
+    border-color: #0;
+    border-radius: 25px;
+    color: #a94442;
+    padding: 50px 50px 50px 50px;
+    text-align: center;
+    background-size: contain;
+    background-image: url(asset_path("img/ok_ground.png"));
+    background-repeat: no-repeat;
+    background-position: center center;    
+}

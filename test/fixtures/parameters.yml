@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  temp_min: 1
+  temp_max: 1
+  umidity_min: 1
+  umidity_max: 1
+  ground_umi_max: 1
+  ground_umi_min: 1
+  lum_max: 1
+  lum_min: 1
+  water_level_min: 1
+
+two:
+  name: MyString
+  temp_min: 1
+  temp_max: 1
+  umidity_min: 1
+  umidity_max: 1
+  ground_umi_max: 1
+  ground_umi_min: 1
+  lum_max: 1
+  lum_min: 1
+  water_level_min: 1
