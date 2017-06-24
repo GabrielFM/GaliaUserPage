@@ -12,13 +12,14 @@ class ApplicationController < ActionController::Base
   		if user.authenticate(password)
 		  	sit = Situation.find_by(user_id: user.id)
 		  	sit.update_attributes(temp: params[:temp],
-		  									  umidity: params[:umidity],
-		  									  pump: params[:pump],
 		  									  lum: params[:lum],
-		  									  water_level: params[:water_level],
+                          water_level: params[:water_level],
                           ground_umi: params[:ground_umi])
+        @pump = sit.pump ? 1 : 0
+        sit.update_attributes(pump: false)
 		  	sit.save
 		  end
+      
 	   end
      render layout: false
   end

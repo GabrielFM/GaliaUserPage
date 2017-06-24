@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
 	post '/infoUpdate', to: 'application#infoUpdate'
 	get '/info/:id', to: 'users#info'
+	get '/pump/:id', to: 'users#pump'
 
 	get    '/login',   to: 'sessions#new'
   	post   '/login',   to: 'sessions#create'

@@ -1,7 +1,7 @@
 <h1>Situação</h1>
 <br>
 <div class="row">
-	<div class = "col-sm-3"><center>
+	<div class = "col-sm-4"><center>
 		<% if @situation.temp <= @parameter.temp_min%>
 			<%= image_tag("low_temp.png", class: "situation-icon-temp-low", size: "200") %>
 		<% elsif @situation.temp >= @parameter.temp_max%>
@@ -12,7 +12,7 @@
 		<h3><b>Temperatura:</b> <%= @situation.temp%>°C </h3>
 		</center>
 	</div>
-	<div class = "col-sm-3"><center>
+	<div class = "col-sm-4"><center>
 		<% if @situation.ground_umi <= @parameter.ground_umi_min%>
 			<%= image_tag("dry_ground.png", class: "situation-icon-ground-dry", size: "200") %>
 		<% elsif @situation.ground_umi >= @parameter.ground_umi_max%>
@@ -23,18 +23,7 @@
 		<h3><b>Umidade do Solo:</b> <%= @situation.ground_umi%>% </h3>
 		</center>
 	</div>
-	<div class = "col-sm-3"><center>
-		<% if @situation.umidity <= @parameter.umidity_min%>
-			<%= image_tag("dry_ground.png", class: "situation-icon-ground-dry", size: "200") %>
-		<% elsif @situation.umidity >= @parameter.umidity_max%>
-			<%= image_tag("wet_ground.png", class: "situation-icon-ground-wet", size: "200") %>
-		<% else %>
-			<%= image_tag("ok_ground.png", class: "situation-icon-ground-ok", size: "200") %>
-		<% end %>
-		<h3><b>Umidade do Ar:</b> <%= @situation.umidity%>% </h3>
-		</center>
-	</div>
-	<div class = "col-sm-3"><center>
+	<div class = "col-sm-4"><center>
 		<% if @situation.lum <= @parameter.lum_min%>
 			<%= image_tag("dry_ground.png", class: "situation-icon-ground-dry", size: "200") %>
 		<% elsif @situation.lum >= @parameter.lum_max%>
@@ -45,4 +34,6 @@
 		<h3><b>Luminosidade:</b> <%= @situation.lum%> </h3>
 		</center>
 	</div>
+
+	<%= link_to "LIGAR BOMBA", "/pump/#{@user.id}", method: "get" %>
 </div>

@@ -10,6 +10,13 @@ class UsersController < ApplicationController
   	init_situation
   end
 
+  def pump
+    init_situation
+    @situation.update_attributes(pump: true)
+    @situation.save
+    redirect_to("/info/#{@user.id}")
+  end
+
   private
 
   	def init_situation
