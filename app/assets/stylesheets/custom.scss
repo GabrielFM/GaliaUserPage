@@ -225,3 +225,14 @@ footer {
     background-repeat: no-repeat;
     background-position: center center;    
 }
+
+/* nav bar */
+
+.navbar-inverse{
+    background-color: #13a515;
+    border-color: #13a515;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #fff;
+}

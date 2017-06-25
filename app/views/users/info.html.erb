@@ -37,11 +37,23 @@
 		<% end %>
 		</center>
 	</div>
+	
 </div>
 <br>
 <div class="row">
-	<div class = "col-sm-12"><center>
+	<div class = "col-sm-6"><center>
 		<%= link_to image_tag("watering.png", class: "watering-button", size: "200"), "/pump/#{@user.id}" %>
 		<h3><b>Acionar Regador</b></h3>
-	</div></center>
+	</div>
+	</center>
+	<div class = "col-sm-6"><center>
+		<% if @situation.water_level <= @parameter.water_level_min%>
+			<%= image_tag("full_bucket.png", class: "situation-icon-ground-ok", size: "200") %>
+			<h3><b>Reservatório Cheio</b></h3>
+		<% else %>
+			<%= image_tag("empty_bucket.png", class: "situation-icon-ground-wet", size: "200") %>
+			<h3><b>Reservatório Vazio</b></h3>
+		<% end %>
+		</center>
+	</div>
 </div>
