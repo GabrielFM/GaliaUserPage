@@ -4,36 +4,44 @@
 	<div class = "col-sm-4"><center>
 		<% if @situation.temp <= @parameter.temp_min%>
 			<%= image_tag("low_temp.png", class: "situation-icon-temp-low", size: "200") %>
+			<h3><b>Temperatura muito baixa:</b> <%= @situation.temp%>°C </h3>
 		<% elsif @situation.temp >= @parameter.temp_max%>
 			<%= image_tag("high_temp.png", class: "situation-icon-temp-high", size: "200") %>
+			<h3><b>Temperatura muito alta:</b> <%= @situation.temp%>°C </h3>
 		<% else %>
 			<%= image_tag("good_temp.png", class: "situation-icon-temp-good", size: "200") %>
+			<h3><b>Temperatura boa:</b> <%= @situation.temp%>°C </h3>
 		<% end %>
-		<h3><b>Temperatura:</b> <%= @situation.temp%>°C </h3>
 		</center>
 	</div>
 	<div class = "col-sm-4"><center>
 		<% if @situation.ground_umi <= @parameter.ground_umi_min%>
-			<%= image_tag("dry_ground.png", class: "situation-icon-ground-dry", size: "200") %>
+			<%= image_tag("wer_ground.png", class: "situation-icon-ground-wet", size: "200") %>
+			<h3><b>Solo Encharcado</b></h3>
 		<% elsif @situation.ground_umi >= @parameter.ground_umi_max%>
-			<%= image_tag("wet_ground.png", class: "situation-icon-ground-wet", size: "200") %>
+			<%= image_tag("dry_ground.png", class: "situation-icon-ground-dry", size: "200") %>
+			<h3><b>Solo muito seco</b></h3>
 		<% else %>
 			<%= image_tag("ok_ground.png", class: "situation-icon-ground-ok", size: "200") %>
+			<h3><b>Solo úmido</b></h3>
 		<% end %>
-		<h3><b>Umidade do Solo:</b> <%= @situation.ground_umi%>% </h3>
 		</center>
 	</div>
 	<div class = "col-sm-4"><center>
 		<% if @situation.lum <= @parameter.lum_min%>
-			<%= image_tag("dry_ground.png", class: "situation-icon-ground-dry", size: "200") %>
-		<% elsif @situation.lum >= @parameter.lum_max%>
-			<%= image_tag("wet_ground.png", class: "situation-icon-ground-wet", size: "200") %>
+			<%= image_tag("sun.png", class: "situation-icon-light", size: "200") %>
+			<h3><b>Iluminado</b></h3>
 		<% else %>
-			<%= image_tag("ok_ground.png", class: "situation-icon-ground-ok", size: "200") %>
+			<%= image_tag("moon.png", class: "situation-icon-dark", size: "200") %>
+			<h3><b>Escuro</b></h3>
 		<% end %>
-		<h3><b>Luminosidade:</b> <%= @situation.lum%> </h3>
 		</center>
 	</div>
-
-	<%= link_to "LIGAR BOMBA", "/pump/#{@user.id}", method: "get" %>
+</div>
+<br>
+<div class="row">
+	<div class = "col-sm-12"><center>
+		<%= link_to image_tag("watering.png", class: "watering-button", size: "200"), "/pump/#{@user.id}" %>
+		<h3><b>Acionar Regador</b></h3>
+	</div></center>
 </div>

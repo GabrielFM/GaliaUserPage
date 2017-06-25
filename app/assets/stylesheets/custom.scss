@@ -115,7 +115,7 @@ footer {
 */
 
 .situation-icon-temp-low {
-    background-color: #0AB0EF;
+    background-color: #FF3333;
     border-color: #0;
     border-radius: 25px;
     color: #a94442;
@@ -180,6 +180,42 @@ footer {
 
 .situation-icon-ground-ok {
     background-color: #33FF66;
+    border-color: #0;
+    border-radius: 25px;
+    color: #a94442;
+    padding: 50px 50px 50px 50px;
+    text-align: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;    
+}
+
+.situation-icon-light {
+    background-color: #F9FB31;
+    border-color: #0;
+    border-radius: 25px;
+    color: #a94442;
+    padding: 50px 50px 50px 50px;
+    text-align: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;    
+}
+
+.situation-icon-dark {
+    background-color: #5D8AA8;
+    border-color: #0;
+    border-radius: 25px;
+    color: #a94442;
+    padding: 50px 50px 50px 50px;
+    text-align: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;    
+}
+
+.watering-button {
+    background-color: #89CFF0;
     border-color: #0;
     border-radius: 25px;
     color: #a94442;
